@@ -13,3 +13,7 @@ COPY . .
 
 # Expõe a porta que a aplicação FastAPI irá rodar  (padrão é 8000)
 EXPOSE 8000
+
+# Comando para rodar a aplicação usando uvicorn
+# O host 0.0.0.0 permite que a aplicação seja acessivel externamente ao contêiner
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
