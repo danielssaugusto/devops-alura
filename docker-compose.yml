@@ -1,0 +1,18 @@
+version: '3.8' # Não é obrigatório
+
+services:
+  app:
+    build: .
+    container_name: minha-fastapi-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
