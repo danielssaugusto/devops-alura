@@ -3,7 +3,7 @@ version: '3.8' # Não é obrigatório
 services:
   app:
     build: .
-    container_name: minha-fastapi-app
+    container_name: api
     ports:
       - "8000:8000"
     volumes:

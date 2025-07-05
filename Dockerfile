@@ -6,7 +6,7 @@ WORKDIR /app
 # Copia o arquivo de requisitos e instala as dependências
 # Usamos --no-cache-dir para evitar o cache do pip, reduzindo o tamanho da imagem
 COPY requirements.txt .
-RUN pip install --no-chache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia o restante do código da aplicação para o diretório de trabalho
 COPY . .
